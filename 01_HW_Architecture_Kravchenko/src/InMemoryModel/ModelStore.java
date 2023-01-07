@@ -15,7 +15,9 @@ public class ModelStore implements IModelChanger {
     private ArrayList<IModelChangedObserver> changedObservers = new ArrayList<>();
 
     public ModelStore(Texture texture) {
-        models.add(new PoligonalModel(texture));
+        ArrayList<Texture> newTextures = new ArrayList<>();
+        newTextures.add(texture);
+        models.add(new PoligonalModel(newTextures));
         flashes.add(new Flash());
         cameras.add(new Camera());
         scenes.add(new Scene(models.get(0), cameras.get(0)));

@@ -2,15 +2,17 @@ package ModelElements;
 
 import BaseTypes.Point3D;
 
+import java.util.ArrayList;
+
 /**
  * The class  PoligonalModel describes the polygonal model.
  */
 public class PoligonalModel {
-    public Poligon poligons;
-    public Texture textures;
+    public ArrayList<Poligon> poligons;
+    public ArrayList<Texture> textures;
 
-    public PoligonalModel(Texture textures) {
+    public PoligonalModel(ArrayList<Texture> textures) {
         this.textures = textures;
-        poligons = new Poligon(new Point3D());
+        this.poligons = new ArrayList<>();
     }
 }
